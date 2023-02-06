@@ -25,6 +25,7 @@ final class ViewController: UIViewController {
         mainView.layer.cornerRadius = 15
         
         sliderAction()
+        
     }
 
     @IBAction func sliderAction() {
