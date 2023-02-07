@@ -9,6 +9,7 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    // MARK: IBOutlets
     @IBOutlet var mainView: UIView!
     
     @IBOutlet var redLabel: UILabel!
@@ -28,11 +29,12 @@ final class ViewController: UIViewController {
         
     }
 
+    // MARK: - IBActions
     @IBAction func sliderAction() {
         
-        redLabel.text = redSlider.value.formatted()
-        greenLabel.text = greenSlider.value.formatted()
-        blueLabel.text = blueSlider.value.formatted()
+        redLabel.text = String(format: "%.2f", redSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
 
         mainView.backgroundColor = UIColor(
                 displayP3Red: CGFloat(redSlider.value),
